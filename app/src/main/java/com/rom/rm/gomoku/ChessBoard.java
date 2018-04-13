@@ -171,7 +171,6 @@ public class ChessBoard {
         view.invalidate(); //kêu view vẽ
         return true;
     }
-
     public void onDrawChessBoard(int colIndex, int rowIndex, View view) {
         int celWidth = view.getWidth() / colQty;
         int celHeight = view.getHeight() / rowQty;

@@ -23,7 +23,7 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.play);
+        setContentView(R.layout.bot);
         chessBoard=new ChessBoard(600,600,8,8,this);
         chessBoard.init();
         imageView=findViewById(R.id.img_gomoku);

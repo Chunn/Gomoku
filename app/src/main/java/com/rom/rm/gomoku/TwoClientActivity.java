@@ -13,13 +13,13 @@ import android.widget.ImageView;
 
 public class TwoClientActivity extends AppCompatActivity {
     private ImageView imageView;
-    private ChessBoard chessBoard;
+    private TwoClientChessBoard chessBoard;
     private Connection connection;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.play);
-        chessBoard=new ChessBoard(600,600,8,8,this);
+        chessBoard=new TwoClientChessBoard(600,600,8,8,this);
         chessBoard.init();
         imageView=findViewById(R.id.img_gomoku);
         imageView.setImageBitmap( chessBoard.drawChessBoard());
@@ -29,7 +29,7 @@ public class TwoClientActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
 
-                return chessBoard.onTouch(v,event);
+                return chessBoard.onTouchTwoPlayer(v,event);
             }
         });
 
